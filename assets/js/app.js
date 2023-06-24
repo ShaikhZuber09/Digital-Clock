@@ -14,6 +14,9 @@ function CreateDigitalClock(){
     let min=d.getMinutes();
     let sec=d.getSeconds();
     let session="AM";
+    if(hr==12){
+        session="PM"
+    }
     if(hr>12){
         session="PM";
         hr=hr-12;
@@ -22,7 +25,7 @@ function CreateDigitalClock(){
     
     
     
-    clock.innerHTML=`${ SetZero(hr)}:${SetZero(min)}:${SetZero(sec)}`
+    clock.innerHTML=`${ SetZero(hr)}:${SetZero(min)}:${SetZero(sec)} ${session}`
     setTimeout(CreateDigitalClock, 300)
 }
 
