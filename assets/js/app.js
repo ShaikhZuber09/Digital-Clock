@@ -1,6 +1,6 @@
 function SetZero(num){
     if(num<10){
-       return '0'+ num
+       return '0'+ num;
     }
     else{
         return num;
@@ -15,7 +15,7 @@ function CreateDigitalClock(){
     let sec=d.getSeconds();
     let session="AM";
     if(hr==12){
-        session="PM"
+        session="PM";
     }
     if(hr>12){
         session="PM";
@@ -26,7 +26,7 @@ function CreateDigitalClock(){
     
     
     clock.innerHTML=`${ SetZero(hr)}:${SetZero(min)}:${SetZero(sec)} ${session}`
-    setTimeout(CreateDigitalClock, 300)
+    setTimeout(CreateDigitalClock, 300);
 }
 
 CreateDigitalClock();
